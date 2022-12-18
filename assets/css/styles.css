@@ -194,12 +194,24 @@ img {
 
 /*===== HOME =====*/
 .home {
-  height: calc(100vh - 3rem);
+  margin-top: 20vh;
   row-gap: 1rem;
 }
 .home-data {
   align-self: center;
+  display: flex;
 }
+
+
+/* .....new class added ........ */
+
+.box1{
+  width: 80%;
+}
+
+/* ............. */
+
+
 .home-title {
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-5);
@@ -208,8 +220,7 @@ img {
   color: var(--first-color);
 }
 .home-social {
-  display: flex;
-  flex-direction: column;
+  margin-top: 30px;
 }
 .home-social-icon {
   width: max-content;
@@ -223,17 +234,71 @@ img {
   color: var(--first-color);
 }
 .home-img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  top: 150px;
-  width: 65%;
+  width: 20%;
+  height: 100%;
 }
 .home-img > img {
-  width: 400px;
-  height: 450px;
-  margin-left: 30px;
+  width: 100%;
+  border-radius: 5px;
 }
+
+
+/* .....new class added ........ */
+
+
+.box1{
+  width: 100%;
+}
+
+
+.home-img2{
+  display: none;
+}
+
+@media screen and (max-width: 978px) {
+  .home-img {
+    display: none;
+  }
+
+  .home-title {
+    font-size: 60px;
+  }
+
+  .home-img2{
+    display: block;
+    margin: auto;
+  }
+
+  .home-img2 > img{
+    border-radius: 5px;
+  }
+  
+
+}
+
+/* only for fonts */
+
+@media screen and (max-width: 750px ) {
+  .home-title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 580px ) {
+  .home-title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 480px ) {
+  .home-title {
+    font-size: 30px;
+  }
+}
+
+/* ..................... */
+
+
 
 /*BUTTONS*/
 .button {
@@ -469,18 +534,7 @@ img.man-icons {
     color: var(--second-color);
   }
 
-  .home {
-    height: 100vh;
-  }
-  .home-data {
-    align-self: flex-end;
-  }
-  .home-social {
-    padding-top: 0;
-    padding-bottom: 2.5rem;
-    flex-direction: row;
-    align-self: flex-end;
-  }
+
   .home-social-icon {
     margin-bottom: 0;
     margin-right: var(--mb-4);
@@ -496,9 +550,7 @@ img.man-icons {
     width: 50%;
     transition: 0.5s;
   }
-  /* .about-container {
-    width: 50%;
-  } */
+
   .skills-container {
     grid-template-columns: repeat(2, 1fr);
     text-align: initial;
